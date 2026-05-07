@@ -685,18 +685,6 @@
       </div>
 
       <div class="fp-card">
-        <div class="fp-head">
-          <h3>Difference (A − B)</h3>
-          <span class="badge tie">🔴 higher &nbsp;|&nbsp; 🟢 lower</span>
-        </div>
-        <div class="fp-row"><span>Packets</span>      <span class="fp-val ${diff.packets_diff>0?'bad':diff.packets_diff<0?'good':''}">${diff.packets_diff >= 0 ? '+':'-'}${Math.abs(diff.packets_diff)}</span></div>
-        <div class="fp-row"><span>Bytes</span>        <span class="fp-val ${diff.bytes_diff>0?'bad':diff.bytes_diff<0?'good':''}">${fmtBytes(diff.bytes_diff)}</span></div>
-        <div class="fp-row"><span>Unique IPs</span>   <span class="fp-val ${diff.unique_ips_diff>0?'bad':diff.unique_ips_diff<0?'good':''}">${diff.unique_ips_diff >= 0?'+':'-'}${Math.abs(diff.unique_ips_diff)}</span></div>
-        <div class="fp-row"><span>Mean Packet</span>  <span class="fp-val ${diff.mean_size_diff>0?'bad':diff.mean_size_diff<0?'good':''}">${diff.mean_size_diff} B</span></div>
-        <div class="cmp-note">Positive = Site A is higher. Negative = Site B is higher.</div>
-      </div>
-
-      <div class="fp-card">
         <div class="fp-head"><h3>🏆 Winner Summary</h3></div>
         <div style="margin-bottom:8px;font-size:0.82rem;color:var(--muted)">
           <span style="color:#1d5fbf;font-weight:600;">■ A</span> = <span title="${fp1.site_url}">${hostA}</span>
